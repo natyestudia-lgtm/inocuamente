@@ -83,7 +83,102 @@ header {
 .nav-links a:hover {
     color: var(--primary-light);
 }
+/* --- ESTILOS DEL MENÚ DESPLEGABLE (DROPDOWN) --- */
 
+/* Contenedor relativo */
+.nav-links li.dropdown {
+  position: relative;
+}
+
+/* Enlace principal del desplegable */
+.dropdown-toggle {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  color: var(--primary-light);
+}
+
+.dropdown-toggle .arrow {
+  font-size: 0.75em;
+  transition: transform 0.3s ease;
+}
+
+/* Menú desplegable oculto por defecto */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 280px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 8px 0;
+  list-style: none;
+  z-index: 1001;
+  border: 1px solid var(--border-color);
+  margin-top: 5px; /* Pequeña separación visual */
+}
+
+/* MOSTRAR EL SUBMENÚ AL PASAR EL CURSOR */
+.nav-links li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-links li.dropdown:hover .dropdown-toggle .arrow {
+  transform: rotate(180deg);
+}
+
+/* Estilos de los elementos internos del submenú */
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 18px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f4f6f8;
+  color: var(--primary);
+}
+
+/* Separador entre servicios y recursos/ebooks */
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 6px 0;
+}
+
+/* Adaptación responsive para pantallas pequeñas (Celulares) */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-left: 3px solid var(--primary-light);
+    border-radius: 0;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.02);
+    margin-top: 10px;
+  }
+}
 /* ==========================================
    3. HERO BANNER & GALERÍA DE IMÁGENES
    ========================================== */
