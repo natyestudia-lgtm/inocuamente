@@ -327,6 +327,28 @@ ul.dropdown-menu {
     outline: none;
 }
 
+/* Control para que la portada sea responsiva */
+.imagen-portada {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Le da un toque moderno con bordes redondeados */
+}
+
+/* Control para el contenedor del video */
+.seccion-carrusel {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.video-cocina {
+    max-width: 600px; /* Evita que el video se vea gigante en pantallas de PC */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para que resalte */
+}
+
+
 /* ==========================================
    6. BOTONES Y ESTILOS DE WHATSAPP
    ========================================== */
